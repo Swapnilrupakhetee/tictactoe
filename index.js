@@ -38,6 +38,11 @@ function boxClicked(e) {
             return;
         }
 
+        if (spaces.every(space => space !== null)) {
+            playerText.innerText = "It's a draw!";
+            return;
+        }
+
         currentPlayer = currentPlayer == x ? o : x;
         playerText.innerText = "Player " + currentPlayer + "'s Turn";
     }
